@@ -181,24 +181,24 @@ func targetCount(data *CounterData, config *configJson) {
 	}
 }
 
-//func targettest(data *CounterData, config *configJson) {
-//	fmt.Println(config.ShiftTimeMonday[2].OnTime)
-//	fmt.Println(config.ShiftTimeMonday[2].OffTime)
-//	//t, _ := time.Parse(, "01 Jan 15 " + config.ShiftTimeMonday[0].OffTime)
-//	currentTime := time.Now()
-//	currentTimeFormat := currentTime.Format(time.RFC3339)
-//	onTime := convertTime(config.ShiftTimeMonday[0].OnTime, currentTimeFormat)
-//	offTime := convertTime(config.ShiftTimeMonday[0].OffTime, currentTimeFormat)
-//	fmt.Println(onTime)
-//	fmt.Println(offTime)
-//	fmt.Println(int(onTime.Weekday()))
-//	//fmt.Println(currentTime.Format(time.RFC3339))
-//	//fmt.Println(currentTime.Format(time.RFC3339)[0:11])
-//	//fmt.Println(currentTime.Format(time.RFC3339)[19:])
-//	fmt.Println(inTimeSpan(onTime, offTime, currentTime))
-//
-//	time.Sleep(1000 * time.Millisecond)
-//}
+func targettest(data *CounterData, config *configJson) {
+	fmt.Println(config.ShiftTimeMonday[2].OnTime)
+	fmt.Println(config.ShiftTimeMonday[2].OffTime)
+	//t, _ := time.Parse(, "01 Jan 15 " + config.ShiftTimeMonday[0].OffTime)
+	currentTime := time.Now()
+	currentTimeFormat := currentTime.Format(time.RFC3339)
+	onTime := convertTime(config.ShiftTimeMonday[0].OnTime, currentTimeFormat)
+	offTime := convertTime(config.ShiftTimeMonday[0].OffTime, currentTimeFormat)
+	fmt.Println(onTime)
+	fmt.Println(offTime)
+	fmt.Println(int(onTime.Weekday()))
+	//fmt.Println(currentTime.Format(time.RFC3339))
+	//fmt.Println(currentTime.Format(time.RFC3339)[0:11])
+	//fmt.Println(currentTime.Format(time.RFC3339)[19:])
+	fmt.Println(inTimeSpan(onTime, offTime, currentTime))
+
+	time.Sleep(1000 * time.Millisecond)
+}
 
 func readLastLineData() [3]int {
 	currentDate := time.Now().Format("2006-01-02")
