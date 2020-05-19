@@ -44,6 +44,7 @@ type CounterData struct {
 }
 
 func httpConnect(url string, data *CounterData, config *configJson) {
+	//Comment
 	fmt.Println("URL:>", url)
 
 	tr := &http.Transport{
